@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accroche Studio, copywriting pour marques françaises</title>
+<meta name="description" content="Je réécris les premières lignes de votre site, vos emails et vos pages de vente pour que vos visiteurs restent, puis achètent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f7f4;
+    --white:#ffffff;
+    --text:#1a1c22;
+    --muted:#646873;
+    --ink:#1b2a6b;
+    --hl:#f3e26a;
+    --line:#dadbe0;
+    --display:"Bricolage Grotesque",system-ui,sans-serif;
+    --body:"Source Serif 4",Georgia,serif;
+    --hand:"Caveat",cursive;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--text);font-family:var(--body);font-size:19px;line-height:1.7;-webkit-font-smoothing:antialiased}
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.05;letter-spacing:-.025em}
+  h2{font-size:clamp(38px,5vw,60px);max-width:16ch}
+  .lead{color:var(--muted);max-width:34em;margin-top:18px}
+  .hl{background:linear-gradient(transparent 55%,var(--hl) 55%,var(--hl) 92%,transparent 92%);padding:0 .08em}
+  .note{font-family:var(--hand);color:var(--ink);font-size:26px;line-height:1.1}
+
+  .btn{display:inline-block;font-family:var(--display);font-weight:500;font-size:17px;text-decoration:none;padding:16px 26px;border-radius:10px;background:var(--ink);color:#fff;transition:background .2s}
+  .btn:hover{background:#13205a}
+  .btn-quiet{background:transparent;color:var(--ink);padding-left:0;padding-right:0;text-decoration:underline;text-underline-offset:5px}
+  .btn-quiet:hover{background:transparent;color:#13205a}
+
+  /* top bar */
+  header.top{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+  .logo{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.03em;text-decoration:none}
+  .logo .mark{background:var(--hl);padding:0 4px;border-radius:3px}
+  header.top nav a{font-family:var(--display);font-size:16px;color:var(--muted);text-decoration:none;margin-left:28px}
+  header.top nav a:hover{color:var(--text)}
+
+  /* hero: the edit */
+  .hero{padding:72px 0 120px}
+  .draft{position:relative;max-width:900px}
+  .before{font-family:var(--display);font-weight:500;font-size:clamp(26px,3.6vw,42px);color:var(--muted);letter-spacing:-.02em;position:relative;display:inline-block}
+  .before .strike{position:absolute;left:-4px;right:-4px;top:54%;height:3px;background:var(--ink);transform-origin:left;transform:scaleX(0);animation:strike .7s .6s ease-out forwards;border-radius:2px}
+  .before-note{position:absolute;right:-8px;top:-34px;transform:rotate(-4deg);opacity:0;animation:fade .5s 1.2s forwards}
+  .after{font-size:clamp(52px,8.4vw,112px);margin-top:28px;max-width:12ch;opacity:0;transform:translateY(10px);animation:rise .8s 1.5s ease-out forwards}
+  .after .hl{background-size:0% 100%;background-repeat:no-repeat;background-image:linear-gradient(transparent 58%,var(--hl) 58%,var(--hl) 90%,transparent 90%);background-color:transparent;animation:mark .7s 2.3s ease-out forwards}
+  .hero-sub{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;margin-top:56px;align-items:end}
+  .hero-sub p{font-size:21px;max-width:28em}
+  .hero-sub .ctas{display:flex;gap:28px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+  @keyframes strike{to{transform:scaleX(1)}}
+  @keyframes fade{to{opacity:1}}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @keyframes mark{to{background-size:100% 100%}}
+
+  section{padding:120px 0;border-top:1px solid var(--line)}
+
+  /* examples */
+  .examples{display:grid;gap:28px;margin-top:64px}
+  .ex{display:grid;grid-template-columns:260px 1fr;background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+  .ex .photo{min-height:260px}
+  .ex .text{padding:36px 40px;display:flex;flex-direction:column;justify-content:center}
+  .ex .who{font-family:var(--display);font-size:15px;color:var(--muted)}
+  .ex .b{margin-top:14px;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--ink);text-decoration-thickness:2px}
+  .ex .a{font-family:var(--display);font-weight:700;font-size:clamp(26px,2.8vw,34px);line-height:1.15;letter-spacing:-.02em;margin-top:6px}
+  .ex .note{margin-top:16px;font-size:24px}
+  .disclaimer{margin-top:22px;font-size:15px;color:var(--muted)}
+
+  /* offers */
+  .offers{margin-top:56px;border-top:2px solid var(--text)}
+  .offer{display:grid;grid-template-columns:1fr auto;gap:24px;padding:28px 0;border-bottom:1px solid var(--line)}
+  .offer h3{font-size:26px;letter-spacing:-.02em}
+  .offer p{color:var(--muted);margin-top:4px;font-size:17px}
+  .offer .price{font-family:var(--display);font-weight:700;font-size:26px;white-space:nowrap}
+  .offer .price span{font-weight:500;font-size:16px;color:var(--muted)}
+  .offer.first{position:relative}
+  .offer.first .note{position:absolute;right:140px;top:22px;transform:rotate(-3deg);font-size:24px}
+
+  /* method */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:64px}
+  .step .n{font-family:var(--display);font-weight:800;font-size:22px;color:var(--ink);width:44px;height:44px;border:2px solid var(--ink);border-radius:50%;display:grid;place-items:center}
+  .step h3{font-size:26px;margin:22px 0 10px;letter-spacing:-.02em}
+  .step p{color:var(--muted);font-size:18px}
+
+  /* about */
+  .about{display:grid;grid-template-columns:1fr 1.15fr;gap:80px;align-items:center}
+  .about .photo{aspect-ratio:4/5;border-radius:6px;overflow:hidden}
+  .about p{margin-top:20px;max-width:30em}
+  .about .note{margin-top:26px}
+
+  /* faq */
+  .faq{margin-top:48px;max-width:780px}
+  details{border-bottom:1px solid var(--line);padding:22px 0}
+  summary{font-family:var(--display);font-weight:500;font-size:22px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--ink);font-weight:700}
+  details[open] summary::after{content:"\2212"}
+  details p{color:var(--muted);margin-top:12px;max-width:40em;font-size:18px}
+
+  /* closing */
+  .closing{background:var(--ink);color:#fff;border-top:none}
+  .closing h2{color:#fff;max-width:18ch}
+  .closing p{color:rgba(255,255,255,.75);margin:22px 0 40px;max-width:32em}
+  .closing .btn{background:var(--hl);color:var(--text)}
+  .closing .btn:hover{background:#fff}
+
+  footer{padding:32px 0 44px;font-size:15px;color:var(--muted)}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media (max-width:860px){
+    body{font-size:18px}
+    header.top nav{display:none}
+    .hero{padding:40px 0 80px}
+    .before-note{position:static;display:block;margin-top:6px;transform:none}
+    .hero-sub{grid-template-columns:1fr;gap:28px}
+    .hero-sub .ctas{justify-content:flex-start}
+    section{padding:84px 0}
+    .ex{grid-template-columns:1fr}
+    .ex .photo{min-height:200px;height:200px}
+    .ex .text{padding:26px}
+    .steps{grid-template-columns:1fr;gap:40px}
+    .about{grid-template-columns:1fr;gap:40px}
+    .offer.first .note{position:static;display:block;transform:none;margin-top:8px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .before .strike,.before-note,.after,.after .hl{animation:none;opacity:1;transform:none}
+    .before .strike{transform:scaleX(1)}
+    .after .hl{background-size:100% 100%}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#"><span class="mark">Accroche</span> Studio</a>
+    <nav aria-label="Menu principal">
+      <a href="#exemples">Exemples</a>
+      <a href="#offres">Offres</a>
+      <a href="#methode">Méthode</a>
+      <a href="#questions">Questions</a>
+    </nav>
+  </header>
+
+  <main>
+  <section class="hero" style="border-top:none" aria-labelledby="titre">
+    <div class="draft">
+      <p class="before">Des produits de qualité, faits avec passion.<span class="strike" aria-hidden="true"></span></p>
+      <span class="note before-note" aria-hidden="true">trop vague, 500 marques disent ça</span>
+      <h1 class="after" id="titre">Des phrases qui <span class="hl">font acheter.</span></h1>
+    </div>
+    <div class="hero-sub">
+      <p>Je réécris les premières lignes de votre site, vos emails et vos pages de vente pour que vos visiteurs restent, puis achètent. En français et en anglais.</p>
+      <div class="ctas">
+        <a class="btn" href="mailto:hans@accroche.studio?subject=Audit%20gratuit%20de%20ma%20page">Demander mon audit gratuit</a>
+        <a class="btn btn-quiet" href="#exemples">Voir des exemples</a>
+      </div>
+    </div>
+  </section>
+  </main>
+</div>
+
+<section id="exemples">
+  <div class="wrap">
+    <h2>Trois en-têtes, trois réécritures.</h2>
+    <p class="lead">Trois exemples pour montrer ma méthode : la phrase qu'on voit partout, celle que j'écrirais, et pourquoi elle marche mieux.</p>
+    <div class="examples">
+      <article class="ex">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1775210603565-37cc9269326f?auto=format&fit=crop&w=700&q=80" alt="Savons artisanaux alignés sur un comptoir en bois" loading="lazy"></div>
+        <div class="text">
+          <div class="who">Une savonnerie artisanale</div>
+          <div class="b">Des savons naturels de qualité</div>
+          <div class="a">Un savon qui dure deux mois, fait à la main dans un village breton.</div>
+          <div class="note">un chiffre concret bat un adjectif</div>
+        </div>
+      </article>
+      <article class="ex">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=700&q=80" alt="Grains de café torréfiés" loading="lazy"></div>
+        <div class="text">
+          <div class="who">Un torréfacteur indépendant</div>
+          <div class="b">Passionnés de café depuis 2010</div>
+          <div class="a">Torréfié lundi. Dans votre tasse jeudi.</div>
+          <div class="note">le client veut de la fraîcheur, pas notre passion</div>
+        </div>
+      </article>
+      <article class="ex">
+        <div class="photo"><img src="https://images.unsplash.com/photo-1572726729207-a78d6feb18d7?auto=format&fit=crop&w=700&q=80" alt="Deux bougies dans des pots en verre ambré" loading="lazy"></div>
+        <div class="text">
+          <div class="who">Une marque de bougies</div>
+          <div class="b">Des bougies pour sublimer votre intérieur</div>
+          <div class="a">La bougie que vos invités vont vous demander.</div>
+          <div class="note">le désir d'abord, la description ensuite</div>
+        </div>
+      </article>
+    </div>
+    <p class="disclaimer">Exemples fictifs : marques et phrases d'origine inventées pour illustrer la méthode. Photos d'illustration.</p>
+  </div>
+</section>
+
+<section id="offres">
+  <div class="wrap">
+    <h2>Un prix fixe, annoncé avant de commencer.</h2>
+    <p class="lead">Deux allers-retours inclus sur chaque livrable. Vous payez la moitié au départ, le reste à la livraison.</p>
+    <div class="offers">
+      <div class="offer first"><div><h3>Audit express</h3><p>Les 3 problèmes qui font fuir vos visiteurs, et votre en-tête réécrit.</p></div><div class="price">150 €</div></div>
+      <div class="offer"><div><h3>Landing page</h3><p>Réécriture complète d'une page d'accueil ou de vente.</p></div><div class="price">600 €</div></div>
+      <div class="offer"><div><h3>Séquence de bienvenue</h3><p>5 emails qui transforment un inscrit en client.</p></div><div class="price">500 €</div></div>
+      <div class="offer"><div><h3>Séquence de vente</h3><p>7 emails pour un lancement ou une offre.</p></div><div class="price">800 €</div></div>
+      <div class="offer"><div><h3>Newsletter mensuelle</h3><p>4 emails par mois, dans votre ton.</p></div><div class="price">400 € <span>par mois</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="methode">
+  <div class="wrap">
+    <h2>Comment on travaille.</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>J'écoute vos clients</h3><p>Je lis vos avis, vos emails, vos questions fréquentes, et je relève les mots qu'ils utilisent vraiment.</p></div>
+      <div class="step"><div class="n">2</div><h3>J'écris</h3><p>Une idée par phrase, une action par page. Chaque hésitation de vos clients trouve sa réponse.</p></div>
+      <div class="step"><div class="n">3</div><h3>Vous validez</h3><p>Vous relisez, je corrige deux fois si besoin, vous publiez. Le délai est fixé avant de commencer.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap about">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1000&q=80" alt="Personne écrivant à la main sur une table en bois" loading="lazy"></div>
+    <div>
+      <h2>Je m'appelle Hans.</h2>
+      <p>J'ai été formé au droit, là où un mot de trop coûte cher. J'écris vos textes avec la même rigueur : chaque promesse est vérifiable, chaque phrase a une raison d'être là.</p>
+      <p>Je travaille à distance, en français et en anglais, pour des marques qui veulent être lues jusqu'au bout.</p>
+      <p class="note">et je réponds sous 48 heures</p>
+    </div>
+  </div>
+</section>
+
+<section id="questions">
+  <div class="wrap">
+    <h2>Vos questions.</h2>
+    <div class="faq">
+      <details><summary>C'est quoi, l'audit gratuit ?</summary><p>Vous m'envoyez le lien de votre page. Je vous réponds par email avec les 3 choses qui font partir vos visiteurs, et une proposition d'en-tête. Sans engagement.</p></details>
+      <details><summary>Combien de temps pour une page ?</summary><p>Ça dépend de la page. Je vous donne un délai précis avant de commencer, et je m'y tiens.</p></details>
+      <details><summary>Et si le texte ne me plaît pas ?</summary><p>Deux allers-retours sont inclus. On ajuste jusqu'à ce que le texte sonne comme vous.</p></details>
+      <details><summary>Vous écrivez aussi en anglais ?</summary><p>Oui. Je peux adapter vos textes pour un public anglophone : je les réécris pour qu'ils vendent, je ne me contente pas de traduire.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing" id="contact">
+  <div class="wrap">
+    <h2>Envoyez-moi votre page. Je vous dis ce qui fait partir vos visiteurs.</h2>
+    <p>Gratuit, sans engagement, réponse sous 48 heures.</p>
+    <a class="btn" href="mailto:hans@accroche.studio?subject=Audit%20gratuit%20de%20ma%20page">Écrire à hans@accroche.studio</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Accroche Studio, copywriting</span>
+    <span>Photos : <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
